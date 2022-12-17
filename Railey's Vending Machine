@@ -1,5 +1,5 @@
-money = 0
-stock1 = 5
+money = 0  # Where inputted money will be stored.
+stock1 = 5  # Variable for item stocks.
 stock2 = 2
 stock3 = 4
 stock4 = 3
@@ -11,8 +11,8 @@ stock9 = 1
 
 print("\nWelcome to Railey's Vending Machine!")  # A welcoming message.
 
-items = {  # Menu of the vending machine.
-    'Chocolates': {  # Items separated into categories
+items = {  # Menu of the vending machine using dictionaries, listing the items and their item code, price, and stock.
+    'Chocolates': {  # Items separated into categories.
         'Product Name': 'KitKat bar',
         'Code': 'A1',
         'Price': 1.95,
@@ -66,7 +66,7 @@ items = {  # Menu of the vending machine.
 
 
 def display_menu():
-    for item, item_info in items.items():  # For loop to display items, item code, item price, and item stock.
+    for item, item_info in items.items():  # For loop to neatly display items, item code, item price, and item stock.
         print("\nCategory: " + item)
         print(f"\n\tItem Name: {item_info['Product Name']} | Code: {item_info['Code']}"
               f" | Price: ${item_info['Price']} | Stock: {item_info['Stock']}")
@@ -151,20 +151,20 @@ def item_stock9(nos9):
         print("This item has " + str(stock9) + " stock/s left.")
 
 
-def purchasing_process():
+def purchasing_process():  # Main program
     global money
     selection_active = True
-    while selection_active:
-        print("\nYour balance is now $" + str(money))
+    while selection_active:  # While loop to allow users to purchase items.
+        print("\nYour balance is now $" + str(money))  # Message to show how much money the user has left.
         selection = input("Enter the code of the item you would like to purchase: ")
 
         if selection == 'A1':
             if stock1 < 1:  # Tells the user that there is no more item stock when variable is 0.
-                print("\nThis item is now out of stock.")
+                print("\nThis item is out of stock.")
             elif money == 0 or money <= 1.94:
                 print("\nYour balance is insufficient, item will not be dispensed.")
                 insufficient = input("Do you want to add more coins or banknotes? Type yes to continue or any key to "
-                                     "skip: ")  # Option for user to add more money when balance is low or zero
+                                     "skip: ")  # Option for user to add more money when balance is low or zero.
                 if insufficient == 'yes':
                     money3 = float(input("\nInsert coins or banknotes: "))
                     money += money3
@@ -303,9 +303,11 @@ def purchasing_process():
                 str(item_stock9(1))
 
         else:
-            print("This is not an item code, try again.")
+            print("This is not an item code.")
 
-        repeat = input("\nWould you like to continue buying items? Type any key to continue or no to quit: ")
+
+        repeat = input("\nWould you like to continue buying items? Type any key to continue or no to quit: ")  # Option for user to buy more items.
+
         if repeat == 'no':  # Ends the program
             selection_active = False
             print("\nYour total change is $" + str(money))
