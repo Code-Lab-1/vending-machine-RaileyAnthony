@@ -305,7 +305,6 @@ def purchasing_process():  # Main program
         else:
             print("This is not an item code.")
 
-
         repeat = input("\nWould you like to continue buying items? Type any key to continue or no to quit: ")  # Option for user to buy more items.
 
         if repeat == 'no':  # Ends the program
