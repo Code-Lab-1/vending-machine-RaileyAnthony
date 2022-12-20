@@ -11,7 +11,7 @@ stock9 = 1
 
 print("\nWelcome to Railey's Vending Machine!")  # A welcoming message.
 
-items = {  # Menu of the vending machine using dictionaries, listing the items and their item code, price, and stock.
+items = {  # Display of list of the items and their item code, price, and stock made by using dictionaries.
     'Chocolates': {  # Items separated into categories.
         'Product Name': 'KitKat bar',
         'Code': 'A1',
