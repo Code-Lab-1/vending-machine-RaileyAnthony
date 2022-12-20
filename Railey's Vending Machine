@@ -1,4 +1,4 @@
-money = 0  # Where inputted money will be stored.
+cash = 0  # Where inputted cash will be stored.
 stock1 = 5  # Variable for item stocks.
 stock2 = 2
 stock3 = 4
@@ -78,14 +78,14 @@ def display_list():
 
 display_list()
 
-money2 = float(input("\nInsert coins or banknotes: $"))  # Input for user to insert any amount of cash.
-money += money2
+cash2 = float(input("\nInsert coins or banknotes: $"))  # Input for user to insert any amount of cash.
+cash += cash2
 
 
 def selections(cost):  # Keeps track of the amount of cash after buying an item.
-    global money  # Allows variable "money" to be used outside the current scope
-    if float(money) >= cost:
-        money -= cost
+    global cash  # Allows variable "money" to be used outside the current scope
+    if float(cash) >= cost:
+        cash -= cost
 
 
 def item_stock(nos):  # Keeps track of item stocks after buying an item.
@@ -152,22 +152,22 @@ def item_stock9(nos9):
 
 
 def purchasing_process():  # Main program
-    global money
+    global cash
     selection_active = True
     while selection_active:  # While loop to allow users to purchase items.
-        print("\nYour balance is now $" + str(money))  # Message to show how much money the user has left.
+        print("\nYour balance is now $" + str(cash))  # Message to show how much money the user has left.
         selection = input("Enter the code of the item you would like to purchase: ")
 
         if selection == 'A1':
             if stock1 < 1:  # Tells the user that there is no more item stock when variable is 0.
                 print("\nThis item is out of stock.")
-            elif money == 0 or money <= 1.94:
+            elif cash == 0 or cash <= 1.94:
                 print("\nYour balance is insufficient, item will not be dispensed.")
                 insufficient = input("Do you want to add more coins or banknotes? Type yes to continue or any key to "
                                      "skip: ")  # Option for user to add more money when balance is low or zero.
                 if insufficient == 'yes':
-                    money3 = float(input("\nInsert coins or banknotes: "))
-                    money += money3
+                    cash3 = float(input("\nInsert coins or banknotes: "))
+                    cash += cash3
             else:
                 print("\nOne KitKat bar has been dispensed.")  # Tells the user that the item has been dispensed.
                 print("KitKat bars go best with a Fanta drink!")  # Suggests user another item to buy.
@@ -177,13 +177,13 @@ def purchasing_process():  # Main program
         elif selection == 'A2':
             if stock2 < 1:
                 print("\nThis item is now out of stock.")
-            elif money == 0 or money <= 4.24:
+            elif cash == 0 or cash <= 4.24:
                 print("\nBalance is insufficient, item will not be dispensed.")
                 insufficient = input("Do you want to add more coins or banknotes? Type yes to continue or any key to "
                                      "skip: ")
                 if insufficient == 'yes':
-                    money3 = float(input("\nInsert coins or banknotes: $"))
-                    money += money3
+                    cash3 = float(input("\nInsert coins or banknotes: $"))
+                    cash += cash3
             else:
                 print("\nOne M&M's packet has been dispensed.")
                 print("M&M\'s go best with a Coca Cola drink!")
@@ -193,13 +193,13 @@ def purchasing_process():  # Main program
         elif selection == 'A3':
             if stock3 < 1:
                 print("\nThis item is now out of stock.")
-            elif money == 0 or money <= 7.99:
+            elif cash == 0 or cash <= 7.99:
                 print("\nBalance is insufficient, item will not be dispensed.")
                 insufficient = input("Do you want to add more coins or banknotes? Type yes to continue or any key to "
                                      "skip: ")
                 if insufficient == 'yes':
-                    money3 = float(input("\nInsert coins or banknotes: $"))
-                    money += money3
+                    cash3 = float(input("\nInsert coins or banknotes: $"))
+                    cash += cash3
             else:
                 print("\nOne Reese\'s Peanut Butter Cups packet has been dispensed.")
                 print("Reese\'s Peanut Butter Cups go best with a Dr. Pepper drink!")
@@ -209,13 +209,13 @@ def purchasing_process():  # Main program
         elif selection == 'B1':
             if stock4 < 1:
                 print("\nThis item is now out of stock.")
-            elif money == 0 or money <= 2.49:
+            elif cash == 0 or cash <= 2.49:
                 print("\nBalance is insufficient, item will not be dispensed.")
                 insufficient = input("Do you want to add more coins or banknotes? Type yes to continue or any key to "
                                      "skip: ")
                 if insufficient == 'yes':
-                    money3 = float(input("\nInsert coins or banknotes: $"))
-                    money += money3
+                    cash3 = float(input("\nInsert coins or banknotes: $"))
+                    cash += cash3
             else:
                 print("\nOne Coca Cola can has been dispensed.")
                 print("Coca Cola goes best with M&M\'s!")
@@ -225,13 +225,13 @@ def purchasing_process():  # Main program
         elif selection == 'B2':
             if stock5 < 1:
                 print("\nThis item is now out of stock.")
-            elif money == 0 or money <= 7.49:
+            elif cash == 0 or cash <= 7.49:
                 print("\nBalance is insufficient, item will not be dispensed.")
                 insufficient = input("Do you want to add more coins or banknotes? Type yes to continue or any key to "
                                      "skip: ")
                 if insufficient == 'yes':
-                    money3 = float(input("\nInsert coins or banknotes: $"))
-                    money += money3
+                    cash3 = float(input("\nInsert coins or banknotes: $"))
+                    cash += cash3
             else:
                 print("\nOne Dr. Pepper can has been dispensed.")
                 print("Dr. Pepper goes best with Reese\'s Peanut Butter Cups!")
@@ -241,13 +241,13 @@ def purchasing_process():  # Main program
         elif selection == 'B3':
             if stock6 < 1:
                 print("\nThis item is now out of stock.")
-            elif money == 0 or money <= 3.74:
+            elif cash == 0 or cash <= 3.74:
                 print("\nBalance is insufficient, item will not be dispensed.")
                 insufficient = input("Do you want to add more coins or banknotes? Type yes to continue or any key to "
                                      "skip: ")
                 if insufficient == 'yes':
-                    money3 = float(input("\nInsert coins or banknotes: $"))
-                    money += money3
+                    cash3 = float(input("\nInsert coins or banknotes: $"))
+                    cash += cash3
             else:
                 print("\nOne Fanta can has been dispensed.")
                 print("Fanta goes best with KitKat!")
@@ -257,13 +257,13 @@ def purchasing_process():  # Main program
         elif selection == 'C1':
             if stock7 < 1:
                 print("\nThis item is now out of stock.")
-            elif money == 0 or money <= 3.99:
+            elif cash == 0 or cash <= 3.99:
                 print("\nBalance is insufficient, item will not be dispensed.")
                 insufficient = input("Do you want to add more coins or banknotes? Type yes to continue or any key to "
                                      "skip: ")
                 if insufficient == 'yes':
-                    money3 = float(input("\nInsert coins or banknotes: $"))
-                    money += money3
+                    cash3 = float(input("\nInsert coins or banknotes: $"))
+                    cash += cash3
             else:
                 print("\nOne Doritos Nacho Cheese Chips packet has been dispensed.")
                 print("Doritos Nacho Cheese Chips go best with Coca Cola!")
@@ -273,13 +273,13 @@ def purchasing_process():  # Main program
         elif selection == 'C2':
             if stock8 < 1:
                 print("\nThis item is now out of stock.")
-            elif money == 0 or money <= 3.49:
+            elif cash == 0 or cash <= 3.49:
                 print("\nBalance is insufficient, item will not be dispensed.")
                 insufficient = input("Do you want to add more coins or banknotes? Type yes to continue or any key to "
                                      "skip: ")
                 if insufficient == 'yes':
-                    money3 = float(input("\nInsert coins or banknotes: $"))
-                    money += money3
+                    cash3 = float(input("\nInsert coins or banknotes: $"))
+                    cash += cash3
             else:
                 print("\nOne Lay\'s Classic Potato Chips packet has been dispensed.")
                 print("Lay\'s Classic Potato Chips go best with Fanta!")
@@ -289,13 +289,13 @@ def purchasing_process():  # Main program
         elif selection == 'C3':
             if stock9 < 1:
                 print("\nThis item is now out of stock.")
-            elif money == 0 or money <= 5.24:
+            elif cash == 0 or cash <= 5.24:
                 print("\nBalance is insufficient, item will not be dispensed.")
                 insufficient = input("Do you want to add more coins or banknotes? Type yes to continue or any key to "
                                      "skip: ")
                 if insufficient == 'yes':
-                    money3 = float(input("\nInsert coins or banknotes: $"))
-                    money += money3
+                    cash3 = float(input("\nInsert coins or banknotes: $"))
+                    cash += cash3
             else:
                 print("\nOne Takis Fuego Chips packet has been dispensed.")
                 print("Takis Fuego Chips go best with Dr. Pepper!")
@@ -309,7 +309,7 @@ def purchasing_process():  # Main program
 
         if repeat == 'no':  # Ends the program
             selection_active = False
-            print("\nYour total change is $" + str(money))
+            print("\nYour total change is $" + str(cash))
             print("Thank you for buying from Railey's Vending Machine!")
 
 
