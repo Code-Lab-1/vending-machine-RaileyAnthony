@@ -65,7 +65,7 @@ items = {  # Display of list of the items and their item code, price, and stock 
     }
 
 
-def display_menu():
+def display_list():
     for item, item_info in items.items():  # For loop to neatly display items, item code, item price, and item stock.
         print("\nCategory: " + item)
         print(f"\n\tItem Name: {item_info['Product Name']} | Code: {item_info['Code']}"
@@ -76,7 +76,7 @@ def display_menu():
               f" | Price: ${item_info['Price3']} | Stock: {item_info['Stock3']}")
 
 
-display_menu()
+display_list()
 
 money2 = float(input("\nInsert coins or banknotes: $"))  # Input for user to insert any amount of cash.
 money += money2
