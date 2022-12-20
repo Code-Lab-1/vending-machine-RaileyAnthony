@@ -166,7 +166,7 @@ def purchasing_process():  # Main program
                 insufficient = input("Do you want to add more coins or banknotes? Type yes to continue or any key to "
                                      "skip: ")  # Option for user to add more money when balance is low or zero.
                 if insufficient == 'yes':
-                    cash3 = float(input("\nInsert coins or banknotes: "))
+                    cash3 = float(input("\nInsert coins or banknotes: $"))
                     cash += cash3
             else:
                 print("\nOne KitKat bar has been dispensed.")  # Tells the user that the item has been dispensed.
