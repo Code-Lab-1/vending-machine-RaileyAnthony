@@ -14,7 +14,7 @@ print("\nWelcome to Railey's Vending Machine!")  # A welcoming message.
 
 time.sleep(1)  # To add a transition effect between texts
 
-items = {  # Display of list of the items and their item code, price, and stock made by using dictionaries.
+items = {  # Dictionary to store the item category, item name, item code, price, and stock.
     'Chocolates': {  # Items separated into categories.
         'Product Name': 'KitKat bar',
         'Code': 'A1',
