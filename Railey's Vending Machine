@@ -1,3 +1,4 @@
+import time
 cash = 0  # Where inputted cash will be stored.
 stock1 = 5  # Variable for item stocks.
 stock2 = 2
@@ -11,6 +12,7 @@ stock9 = 1
 
 print("\nWelcome to Railey's Vending Machine!")  # A welcoming message.
 
+time.sleep(1)
 items = {  # Display of list of the items and their item code, price, and stock made by using dictionaries.
     'Chocolates': {  # Items separated into categories.
         'Product Name': 'KitKat bar',
@@ -80,6 +82,7 @@ def display_list():
 display_list()
 
 print("\n---------------------------------------------------------------------------------")
+time.sleep(1)
 cash2 = float(input("\nInsert coins or banknotes: $"))  # Input for user to insert any amount of cash.
 cash += cash2
 
