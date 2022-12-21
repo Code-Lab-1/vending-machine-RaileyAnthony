@@ -89,7 +89,7 @@ cash += cash2
 
 
 def selections(cost):  # Keeps track of the amount of cash after buying an item.
-    global cash  # Allows variable "money" to be used outside the current scope
+    global cash  # Allows variable "cash" to be used outside the current scope
     if float(cash) >= cost:
         cash -= cost
 
